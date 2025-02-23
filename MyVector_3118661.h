@@ -35,7 +35,7 @@ class MyVector
         // code begins
         data = new DataType[theCapacity]; // create a new instance of data
         for (size_t i = 0; i<theSize; i++){ // iterate through the size
-            data[i] = rhs.data[i]; // set each point in data equal to rhs
+            data[i] = rhs[i]; // set each point in data equal to rhs
         }
         // code ends
     }
@@ -61,7 +61,7 @@ class MyVector
         // code begins
         data = new DataType[theCapacity];
         for (int i = 0; i<theSize; i++){
-            data[i] = rhs.data[i];
+            data[i] = rhs[i];
         }
         // code ends 
     }
@@ -194,7 +194,7 @@ class MyVector
         // code begins
         reserve(theSize + rhs.theSize);
         for (size_t i = 0; i < rhs.theSize; i++) {
-            push_back(rhs.data[i]);
+            push_back(rhs[i]);
         }
         rhs.theSize = 0; 
         return *this;
